@@ -84,42 +84,19 @@
 
 // 6, 1, 33 -> [6, 1, 33]
 
-
-// int[] arr = Console.ReadLine()
-//                 .Split(' ', ',', StringSplitOptions.RemoveEmptyEntries)
-//                 .Select(int.Parse)
-//                 .ToArray();
-// int lenArray = ReadInt("Введите длинну массива: ");
-
-// int[] randomArray = new int[lenArray];
-// for (int i = 0; i < randomArray.Length; i++)
-// {
-//     randomArray[i] = new Random().Next(1, 9);
-//     Console.Write(randomArray[i] + " ");
-// }
-
-
-// // Функция ввода
-// int ReadInt(string message)
-// {
-//     Console.Write(message);
-//     return Convert.ToInt32(Console.ReadLine());
-// }
-
-
 Console.Write("Введите значение N:");
-int elementsCount=int.Parse(Console.ReadLine());
-int[] myArray=new int[elementsCount];
+int elementsCount = int.Parse(Console.ReadLine());
+int[] myArray = new int[elementsCount];
 
-for(int i=0; i<myArray.Length; i++)
+for (int i = 0; i < myArray.Length; i++)
 {
-Console.Write($"Введите элемент массива под индексом {i}:\t");
-myArray[i]=int.Parse(Console.ReadLine());
+    Console.Write($"Введите элемент массива под индексом {i}:\t");
+    myArray[i] = int.Parse(Console.ReadLine());
 }
-Console.WriteLine("Вывод массива");
+Console.WriteLine("Вывод массива:");
 
-for (int i=0;i<myArray.Length; i++)
+for (int i = 0; i < myArray.Length; i++)
 {
-Console.WriteLine("["+(myArray[i]+"]");
+    Console.WriteLine("[" + string.Join(",", myArray[i]) + "]");
 }
 Console.ReadLine();
